@@ -4,6 +4,8 @@ import Card from "../card/Card.js";
 import { data_bases_google } from "../bases/Data_bases_google.js";
 import { data_bases_linkmaps } from "../bases/Data_bases_linkmaps.js";
 import { data_bases_planetminecraft } from "../bases/Data_bases_planetminecraft.js";
+import { data_bases_messeger } from "../bases/Data_bases_messeger.js";
+import { data_bases_torrent } from "../bases/Data_bases_torrent.js";
 
 import "./Tabs.scss";
 
@@ -37,6 +39,18 @@ function Tabs() {
         <button
           className={toggleState === 4 ? "tabs active-tabs" : "tabs"}
           onClick={() => toggleTab(4)}
+        >
+          Messenger
+        </button>
+        <button
+          className={toggleState === 5 ? "tabs active-tabs" : "tabs"}
+          onClick={() => toggleTab(5)}
+        >
+          torrent
+        </button>
+        <button
+          className={toggleState === 6 ? "tabs active-tabs" : "tabs"}
+          onClick={() => toggleTab(5)}
         >
           ----
         </button>
@@ -75,6 +89,26 @@ function Tabs() {
 
         <div
           className={toggleState === 4 ? "content  active-content" : "content"}
+        >
+          {data_bases_messeger.map((el) => {
+            return (
+              <Card key={el.id} name={el.name} href={el.href} ico={el.ico} />
+            );
+          })}
+        </div>
+
+        <div
+          className={toggleState === 5 ? "content  active-content" : "content"}
+        >
+          {data_bases_torrent.map((el) => {
+            return (
+              <Card key={el.id} name={el.name} href={el.href} ico={el.ico} />
+            );
+          })}
+        </div>
+
+        <div
+          className={toggleState === 6 ? "content  active-content" : "content"}
         ></div>
       </div>
     </div>

@@ -5,8 +5,10 @@ import Translate from "../icon-js/Translate.js";
 import Gmail from "../icon-js/Gmail.js";
 import Googledocs from "../icon-js/Googledocs.js";
 import Googlesheets from "../icon-js/Googlesheets.js";
-import Googleforms from "../icon-js/Googleforms";
-import Googledrive from "../icon-js/Googledrive";
+import Googleforms from "../icon-js/Googleforms.js";
+import Googledrive from "../icon-js/Googledrive.js";
+import Youtube from "../icon-js/Youtube.js";
+import Youtubemusic from "../icon-js/Youtubemusic.js";
 
 export const data_bases_google = [
   {
@@ -50,5 +52,17 @@ export const data_bases_google = [
     name: "Google grive",
     ico: <Googledrive />,
     href: "https://drive.google.com/drive",
+  },
+  {
+    id: 7,
+    name: "Youtube",
+    ico: <Youtube />,
+    href: "https://www.youtube.com/",
+  },
+  {
+    id: 8,
+    name: "Youtube music",
+    ico: <Youtubemusic />,
+    href: "https://www.music.youtube.com/",
   },
 ];
