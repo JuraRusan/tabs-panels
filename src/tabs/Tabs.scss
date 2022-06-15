@@ -1,0 +1,54 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 95%;
+  height: 95vh;
+  background: rgba(128, 128, 128, 0.075);
+  margin: 10px auto;
+  .bloc-tabs {
+    display: flex;
+    flex-direction: row;
+    button {
+      border: none;
+      outline: none;
+    }
+    .tabs {
+      padding: 10px;
+      text-align: center;
+      font-weight: 400;
+      font-size: 22px;
+      color: rgb(255, 255, 255);
+      width: 50%;
+      background: rgba(128, 128, 128, 0.075);
+      cursor: pointer;
+      box-sizing: content-box;
+      position: relative;
+    }
+    .active-tabs {
+      background: rgba(0, 0, 0, 0.25);
+    }
+    .tabs:not(:last-child) {
+      border-right: 1px solid rgba(0, 0, 0, 0.274);
+    }
+  }
+  .content-tabs {
+    flex-grow: 1;
+    .content {
+      background: rgba(0, 0, 0, 0.25);
+      padding: 20px;
+      width: 100%;
+      height: 100%;
+      display: none;
+      opacity: 0;
+      transition: all 0.35s ease;
+    }
+    .active-content {
+      display: flex;
+      flex-direction: row;
+      justify-content: initial;
+      flex-wrap: wrap;
+      opacity: 1;
+    }
+  }
+}
